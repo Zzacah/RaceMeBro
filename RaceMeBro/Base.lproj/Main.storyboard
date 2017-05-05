@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iEe-cX-EHP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Race Me Bro-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RaceMeBro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OJ-C0-OM2">
+                                <rect key="frame" x="16" y="239" width="343" height="188"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="63"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ea-rY-v9D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.80821700507614214" green="0.76685410451837266" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Race Me Bro" id="brZ-7w-uVM">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="B9c-y8-aYZ">
+                            <connections>
+                                <segue destination="hyU-Ou-nCS" kind="show" id="VDd-DU-MpG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="startButton" destination="3OJ-C0-OM2" id="a4g-mk-hwn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.8" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AOv-k8-DdM">
+            <objects>
+                <viewController id="hyU-Ou-nCS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Ok-ax-RDa"/>
+                        <viewControllerLayoutGuide type="bottom" id="t6g-eu-vx1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4cf-4L-SZy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Delay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbP-aP-BJq">
+                                <rect key="frame" x="15" y="81" width="117.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="2" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Yzo-J3-qXk">
+                                <rect key="frame" x="13.5" y="128" width="347" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 s" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Re-5V-KAD">
+                                <rect key="frame" x="323.5" y="90" width="34.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9kS-UO-A8I">
+                                <rect key="frame" x="127" y="249" width="121" height="29"/>
+                                <segments>
+                                    <segment title="Random"/>
+                                    <segment title="Timed"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icz-Hi-DZC">
+                                <rect key="frame" x="264" y="189" width="93" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dBz-v7-CHO">
+                                <rect key="frame" x="14" y="291" width="345" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Second Delay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVy-Ed-Xa6">
+                                <rect key="frame" x="15" y="189" width="154" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hbP-aP-BJq" firstAttribute="leading" secondItem="4cf-4L-SZy" secondAttribute="leading" constant="15" id="1hf-bP-yxP"/>
+                            <constraint firstItem="hbP-aP-BJq" firstAttribute="leading" secondItem="4cf-4L-SZy" secondAttribute="leading" constant="15" id="4xC-ck-XTx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dBz-v7-CHO" secondAttribute="trailing" constant="2" id="BDy-ce-5lL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Re-5V-KAD" secondAttribute="trailing" constant="1" id="Cai-wc-N51"/>
+                            <constraint firstItem="Yzo-J3-qXk" firstAttribute="top" secondItem="3Re-5V-KAD" secondAttribute="bottom" constant="8" id="IK4-iL-9BB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Icz-Hi-DZC" secondAttribute="trailing" constant="2" id="K9H-2l-gmn"/>
+                            <constraint firstItem="dBz-v7-CHO" firstAttribute="leading" secondItem="4cf-4L-SZy" secondAttribute="leadingMargin" id="ViC-Os-lCu"/>
+                            <constraint firstItem="dBz-v7-CHO" firstAttribute="top" secondItem="9kS-UO-A8I" secondAttribute="bottom" constant="14" id="adv-gW-RyG"/>
+                            <constraint firstItem="Icz-Hi-DZC" firstAttribute="top" secondItem="Yzo-J3-qXk" secondAttribute="bottom" constant="31" id="cAd-n9-YA9"/>
+                            <constraint firstItem="zVy-Ed-Xa6" firstAttribute="leading" secondItem="4cf-4L-SZy" secondAttribute="leading" constant="15" id="e7f-Y2-3uW"/>
+                            <constraint firstItem="3Re-5V-KAD" firstAttribute="top" secondItem="0Ok-ax-RDa" secondAttribute="bottom" constant="26" id="f53-s4-xwW"/>
+                            <constraint firstItem="Yzo-J3-qXk" firstAttribute="leading" secondItem="4cf-4L-SZy" secondAttribute="leading" constant="15.35" id="hsH-Zw-SlZ"/>
+                            <constraint firstItem="zVy-Ed-Xa6" firstAttribute="top" secondItem="Yzo-J3-qXk" secondAttribute="bottom" constant="8" id="huG-Al-bWw"/>
+                            <constraint firstItem="dBz-v7-CHO" firstAttribute="top" secondItem="9kS-UO-A8I" secondAttribute="bottom" constant="14" id="mmz-0k-CzZ"/>
+                            <constraint firstItem="hbP-aP-BJq" firstAttribute="top" secondItem="0Ok-ax-RDa" secondAttribute="bottom" constant="17" id="vpg-33-Tz6"/>
+                            <constraint firstAttribute="trailing" secondItem="Yzo-J3-qXk" secondAttribute="trailing" constant="16.649999999999999" id="ymy-Te-ZTA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eui-wd-QNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.5999999999999" y="138.98050974512745"/>
+        </scene>
+        <!--Race Me Bro-->
+        <scene sceneID="WCL-Cq-kI1">
+            <objects>
+                <navigationController title="Race Me Bro" automaticallyAdjustsScrollViewInsets="NO" id="iEe-cX-EHP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g6m-pP-KGD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zjq-d3-CSz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMp-Ca-ZKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
